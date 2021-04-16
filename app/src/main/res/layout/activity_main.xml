@@ -34,10 +34,11 @@
         android:layout_marginRight="130dp"
         android:layout_marginStart="129dp"
         android:layout_marginTop="28dp"
+        android:src="@drawable/coffee"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/openDonutButton"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/coffee" />
 
     <ImageButton
         android:id="@+id/viewOrderButton"
@@ -48,10 +49,11 @@
         android:layout_marginRight="130dp"
         android:layout_marginStart="129dp"
         android:layout_marginTop="28dp"
+        android:src="@drawable/order"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/openCoffeeButton"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/order" />
 
     <ImageButton
         android:id="@+id/storeOrderButton"
