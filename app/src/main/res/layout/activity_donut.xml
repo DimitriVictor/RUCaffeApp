@@ -5,4 +5,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DonutActivity"/>
+    tools:context=".DonutActivity">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:srcCompat="@drawable/arrayofdonuts" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/list_of_donuts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/jellyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jelly" />
+
+            <Button
+                android:id="@+id/bostonBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Boston Cream" />
+
+            <Button
+                android:id="@+id/glazedBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Glazed" />
+
+            <Button
+                android:id="@+id/blueberryBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Blueberries" />
+
+            <Button
+                android:id="@+id/oldfashionBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Old Fashion" />
+
+            <Button
+                android:id="@+id/spicyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spicy Surprise" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
