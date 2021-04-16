@@ -2,7 +2,9 @@ package com.example.rucaffeapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 
 /**
@@ -26,5 +28,17 @@ public class MainActivity extends AppCompatActivity {
         orderCoffeeButton = (ImageButton) findViewById(R.id.openCoffeeButton);
         viewOrderButton = (ImageButton) findViewById(R.id.viewOrderButton);
         storeOrderButton = (ImageButton) findViewById(R.id.storeOrderButton);
+
+        orderDonutButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                openDonutMenu();
+            }
+        });
+    }
+
+    public void openDonutMenu(){
+        Intent intent = new Intent(this, DonutActivity.class);
+        startActivity(intent);
     }
 }
