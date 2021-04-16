@@ -35,10 +35,22 @@ public class MainActivity extends AppCompatActivity {
                 openDonutMenu();
             }
         });
+
+        orderCoffeeButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                openCoffeeMenu();
+            }
+        });
     }
 
     public void openDonutMenu(){
         Intent intent = new Intent(this, DonutActivity.class);
+        startActivity(intent);
+    }
+
+    public void openCoffeeMenu(){
+        Intent intent = new Intent(this, CoffeeActivity.class);
         startActivity(intent);
     }
 }
