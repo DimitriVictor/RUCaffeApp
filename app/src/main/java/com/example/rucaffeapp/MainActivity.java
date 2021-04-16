@@ -5,6 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
+/**
+ * This class is the Main Activity
+ * @author Padmank Ambadipudi
+ * @author Dimitri Victor
+ */
 public class MainActivity extends AppCompatActivity {
 
     private ImageButton orderDonutButton;
