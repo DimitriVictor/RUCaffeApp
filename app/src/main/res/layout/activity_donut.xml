@@ -8,7 +8,7 @@
     tools:context=".DonutActivity">
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/donutMenuPic"
         android:layout_width="match_parent"
         android:layout_height="170dp"
         app:srcCompat="@drawable/arrayofdonuts" />

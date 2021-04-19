@@ -1,8 +1,11 @@
 package com.example.rucaffeapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -14,6 +17,7 @@ import android.widget.ImageButton;
  */
 public class MainActivity extends AppCompatActivity {
 
+    private ActionBar actionbar;
     private ImageButton orderDonutButton;
     private ImageButton orderCoffeeButton;
     private ImageButton viewOrderButton;
@@ -23,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        actionbar = getSupportActionBar();
+        actionbar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#000000")));
 
         orderDonutButton = (ImageButton) findViewById(R.id.openDonutButton);
         orderCoffeeButton = (ImageButton) findViewById(R.id.openCoffeeButton);

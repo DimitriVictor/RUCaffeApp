@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">RUCaffeApp</string>
+
+    <string name="color">color</string>
+    <string name="jellyred">#C90808</string>
+    <string name="brown">#795A5A</string>
+
+    <string name="donutType">donutType</string>
+    <string name="donutColor">donutColor</string>
+
+    <string name="jellyDonut">Jelly Donut</string>
+    <string name="bostonCream">Boston Cream</string>
+    <string name="glazed">Glazed Donut</string>
+    <string name="blueberries">Blueberry Donut</string>
+    <string name="oldfashion">Old Fashion</string>
+    <string name="spicy">Spicy Surprise</string>
 </resources>
