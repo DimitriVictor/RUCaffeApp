@@ -25,7 +25,6 @@ public class OrderDonutActivity extends AppCompatActivity {
         setTitle("Add To Order"); //FIX STRING
         actionbar = getSupportActionBar();
         String color = getIntent().getStringExtra(getString(R.string.color));
-        //System.out.println(color);
         actionbar.setBackgroundDrawable(new ColorDrawable(Color.parseColor(color)));
 
         donutType = getIntent().getStringExtra(getString(R.string.donutType));
