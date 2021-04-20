@@ -3,7 +3,8 @@
 
     <string name="color">color</string>
     <string name="jellyred">#C90808</string>
-    <string name="brown">#795A5A</string>
+    <string name="brown">#964B00</string>
+    <string name="lightbrown">#b99c80</string>
 
     <string name="donutType">donutType</string>
     <string name="donutColor">donutColor</string>

@@ -56,6 +56,14 @@ public class DonutActivity extends AppCompatActivity {
             }
         });
         bostonBtn.setBackgroundColor(getResources().getColor(R.color.brown));
+
+        glazedBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                orderDonut(getString(R.string.glazed), getString(R.string.lightbrown));
+            }
+        });
+        glazedBtn.setBackgroundColor(getResources().getColor(R.color.lightbrown));
     }
 
     private void orderDonut(String s, String color) {
