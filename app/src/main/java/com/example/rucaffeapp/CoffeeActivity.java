@@ -45,18 +45,17 @@ public class CoffeeActivity extends AppCompatActivity {
         sizeSpinner = (Spinner) findViewById(R.id.sizeSpinner);
         totalTextArea =  (TextView) findViewById(R.id.subtotalTextView);
 
-        totalTextArea.setText(R.string.Cream);
         caramelCheckbox.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-               // selectCaramel();
+                selectCaramel();
             }
         });
 
         milkCheckbox.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-          //      selectMilk();
+               selectMilk();
             }
         });
 
@@ -70,26 +69,23 @@ public class CoffeeActivity extends AppCompatActivity {
         whippedCreamCheckbox.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-          //      selectWhippedCream();
+                selectWhippedCream();
             }
         });
 
         caramelCheckbox.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-          //      selectCaramel();
+                selectCaramel();
             }
         });
-
-        System.out.println(Resources.getSystem().getString(R.string.Coffee));
-
     }
 
     /**
      * This function displays whether the cream addin was selected or deselected.
      */
     void selectCream() {
-        String type = "Constants.CREAM";
+        String type = getString(R.string.Cream);
         if(creamCheckbox.isSelected()){
             addInsPrice += Constants.ADDIN_PRICE;
             coffee.add(type);
@@ -100,4 +96,58 @@ public class CoffeeActivity extends AppCompatActivity {
         double totalPrice = (sizePrice + addInsPrice)*count;
         totalTextArea.setText("$" + String.format("%.2f",totalPrice));
     }
+
+    void selectMilk() {
+        String type = getString(R.string.Milk);
+        if(creamCheckbox.isSelected()){
+            addInsPrice += Constants.ADDIN_PRICE;
+            coffee.add(type);
+        }else{
+            addInsPrice -= Constants.ADDIN_PRICE;
+            coffee.remove(type);
+        }
+        double totalPrice = (sizePrice + addInsPrice)*count;
+        totalTextArea.setText("$" + String.format("%.2f",totalPrice));
+    }
+
+    void selectWhippedCream() {
+        String type = getString(R.string.WhippedCream);
+        if(creamCheckbox.isSelected()){
+            addInsPrice += Constants.ADDIN_PRICE;
+            coffee.add(type);
+        }else{
+            addInsPrice -= Constants.ADDIN_PRICE;
+            coffee.remove(type);
+        }
+        double totalPrice = (sizePrice + addInsPrice)*count;
+        totalTextArea.setText("$" + String.format("%.2f",totalPrice));
+    }
+
+    void selectSyrup() {
+        String type = getString(R.string.Syrup);
+        if(creamCheckbox.isSelected()){
+            addInsPrice += Constants.ADDIN_PRICE;
+            coffee.add(type);
+        }else{
+            addInsPrice -= Constants.ADDIN_PRICE;
+            coffee.remove(type);
+        }
+        double totalPrice = (sizePrice + addInsPrice)*count;
+        totalTextArea.setText("$" + String.format("%.2f",totalPrice));
+    }
+
+    void selectCaramel() {
+        String type = getString(R.string.Caramel);
+        if(creamCheckbox.isSelected()){
+            addInsPrice += Constants.ADDIN_PRICE;
+            coffee.add(type);
+        }else{
+            addInsPrice -= Constants.ADDIN_PRICE;
+            coffee.remove(type);
+        }
+        double totalPrice = (sizePrice + addInsPrice)*count;
+        totalTextArea.setText("$" + String.format("%.2f",totalPrice));
+    }
+
+
 }
