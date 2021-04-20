@@ -14,4 +14,15 @@
     <string name="blueberries">Blueberry Donut</string>
     <string name="oldfashion">Old Fashion</string>
     <string name="spicy">Spicy Surprise</string>
+
+    <string name="Cream">Cream</string>
+    <string name="Milk">Milk</string>
+    <string name="WhippedCream">Whipped Cream</string>
+    <string name="Syrup">Syrup</string>
+    <string name="Caramel">Caramel</string>
+
+    <string name="NoSize">No Size</string>
+    <string name="Coffee">Coffee</string>
+
+
 </resources>
