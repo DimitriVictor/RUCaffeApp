@@ -59,7 +59,7 @@
         android:layout_marginRight="72dp"
         android:layout_marginTop="65dp"
         android:background="@color/cardview_shadow_start_color"
-        android:text="SUBTOTAL:"
+        android:gravity="center_vertical"
         android:textSize="20dp" />
 
     <Button

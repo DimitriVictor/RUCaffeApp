@@ -7,18 +7,15 @@ package com.example.rucaffeapp;
  */
 public class Donut extends MenuItem {
     private String donutType;
-    private String donutFlavor;
     private int quantity;
 
     /**
      * Constructor for the Donut object
      * @param donutType the type of donut
-     * @param donutFlavor the flavor of donut
      * @param quantity the amount of specific donut
      */
-    public Donut(String donutType, String donutFlavor, int quantity){
+    public Donut(String donutType, int quantity){
         this.donutType = donutType;
-        this.donutFlavor = donutFlavor;
         this.quantity = quantity;
     }
 
@@ -39,14 +36,6 @@ public class Donut extends MenuItem {
      */
     public String getDonutType(){
         return this.donutType;
-    }
-
-    /**
-     * Getter method for the donut type
-     * @return the flavor of donut
-     */
-    public String getDonutFlavor(){
-        return this.donutFlavor;
     }
 
     /**
@@ -71,6 +60,6 @@ public class Donut extends MenuItem {
      */
     @Override
     public String toString(){
-        return this.getDonutType() + ": " + this.getDonutFlavor() + "(" + this.getQuantity() + ")";
+        return this.getDonutType() + ": " + "(" + this.getQuantity() + ")";
     }
 }

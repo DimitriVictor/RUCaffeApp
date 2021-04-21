@@ -27,7 +27,7 @@ public class DonutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donut);
 
-        setTitle("Order Donuts");
+        setTitle(R.string.donutname);
         actionbar = getSupportActionBar();
         actionbar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#000000"))); //MIGHT NEED TO CHANGE
 
@@ -64,6 +64,30 @@ public class DonutActivity extends AppCompatActivity {
             }
         });
         glazedBtn.setBackgroundColor(getResources().getColor(R.color.lightbrown));
+
+        blueberryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                orderDonut(getString(R.string.blueberries), getString(R.string.blueberry));
+            }
+        });
+        blueberryBtn.setBackgroundColor(getResources().getColor(R.color.blueberry));
+
+        oldfashionBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                orderDonut(getString(R.string.oldfashion), getString(R.string.oldfashioncolor));
+            }
+        });
+        oldfashionBtn.setBackgroundColor(getResources().getColor(R.color.oldfashioncolor));
+
+        spicyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                orderDonut(getString(R.string.spicy), getString(R.string.spicycolor));
+            }
+        });
+        spicyBtn.setBackgroundColor(getResources().getColor(R.color.spicycolor));
     }
 
     private void orderDonut(String s, String color) {
