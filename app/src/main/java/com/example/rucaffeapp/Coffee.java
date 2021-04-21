@@ -19,7 +19,7 @@ public class Coffee extends MenuItem implements Customizable {
      * Constructor for the Coffee class. It initialized the size, count, and price
      */
     public Coffee(){
-        size = getString(R.string.NoSize);
+        //size = getString(R.string.NoSize);
         count = 1;
         price = 0;
     }

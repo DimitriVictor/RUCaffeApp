@@ -8,6 +8,7 @@
 
     <string name="donutType">donutType</string>
     <string name="donutColor">donutColor</string>
+    <string name="subtotal">Subtotal: $ </string>
 
     <string name="jellyDonut">Jelly Donut</string>
     <string name="bostonCream">Boston Cream</string>
