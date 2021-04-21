@@ -26,5 +26,9 @@
     <string name="NoSize">No Size</string>
     <string name="Coffee">Coffee</string>
 
+    <string name="Short">Short</string>
+    <string name="Tall">Tall</string>
+    <string name="Grande">Grande</string>
+    <string name="Venti">Venti</string>
 
 </resources>

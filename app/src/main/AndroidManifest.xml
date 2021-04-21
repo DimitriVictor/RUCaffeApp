@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RUCaffeApp">
         <activity android:name=".OrderDonutActivity"></activity>
-        <activity android:name=".CoffeeActivity" />
+        <activity android:name=".CoffeeActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".DonutActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
