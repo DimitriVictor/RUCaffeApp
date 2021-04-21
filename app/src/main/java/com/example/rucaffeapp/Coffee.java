@@ -22,16 +22,11 @@ public class Coffee extends MenuItem implements Customizable {
      * Constructor for the Coffee class. It initialized the size, count, and price
      */
     public Coffee(){
+        size = "";
         count = 1;
         price = 0;
     }
 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        size = getString(R.string.NoSize);
-
-
-    }
 
     /**
      * This function adds an Addin to the coffee order
@@ -42,19 +37,19 @@ public class Coffee extends MenuItem implements Customizable {
     public boolean add(Object obj) {
         if (obj instanceof String) {
             String additionType = (String) obj;
-            if (additionType.equals(getString(R.string.Cream))) {
+            if (additionType.equals("Cream")) {
                 hasCream = true;
                 return true;
-            } else if (additionType.equals(getString(R.string.Cream))) {
+            } else if (additionType.equals(Constants.WHIPPEDCREAM)) {
                 hasWhippedCream = true;
                 return true;
-            } else if (additionType.equals(getString(R.string.Milk))) {
+            } else if (additionType.equals(Constants.WHIPPEDCREAM)) {
                 hasMilk = true;
                 return true;
-            } else if (additionType.equals(getString(R.string.Syrup))) {
+            } else if (additionType.equals(Constants.SYRUP)) {
                 hasSyrup = true;
                 return true;
-            } else if (additionType.equals(getString(R.string.Caramel))) {
+            } else if (additionType.equals(Constants.CARAMEL)) {
                 hasCaramel = true;
                 return true;
             }
@@ -71,19 +66,19 @@ public class Coffee extends MenuItem implements Customizable {
     public boolean remove(Object obj) {
         if(obj instanceof String){
             String additionType = (String)obj;
-            if(additionType.equals(getString(R.string.Cream))){
+            if(additionType.equals(Constants.CREAM)){
                 hasCream = false;
                 return true;
-            }else if(additionType.equals(getString(R.string.WhippedCream))){
+            }else if(additionType.equals(Constants.WHIPPEDCREAM)){
                 hasWhippedCream = false;
                 return true;
-            }else if(additionType.equals(getString(R.string.Milk))){
+            }else if(additionType.equals(Constants.MILK)){
                 hasMilk = false;
                 return true;
-            }else if(additionType.equals(getString(R.string.Syrup))){
+            }else if(additionType.equals(Constants.SYRUP)){
                 hasSyrup = false;
                 return true;
-            }else if(additionType.equals(getString(R.string.Caramel))) {
+            }else if(additionType.equals(Constants.CARAMEL)) {
                 hasCaramel = false;
                 return true;
             }
@@ -99,31 +94,31 @@ public class Coffee extends MenuItem implements Customizable {
     public String toString(){
         boolean hasToppings = false;
 
-        String order = getString(R.string.Coffee);
+        String order = "Coffee";
 
         order += "(" + Integer.toString((int)count) + ") ";
 
         order += size +"[";
 
         if(hasCream == true){
-            order += getString(R.string.Cream) + ", ";
+            order += Constants.CREAM + ", ";
             hasToppings = true;
         }
         if(hasSyrup == true){
-            order += getString(R.string.Syrup) + ", ";
+            order += Constants.SYRUP + ", ";
             hasToppings = true;
         }
         if(hasWhippedCream == true){
-            order += getString(R.string.WhippedCream) + ", ";
+            order += Constants.WHIPPEDCREAM + ", ";
             hasToppings = true;
 
         }
         if(hasMilk == true){
-            order += getString(R.string.Milk) + ", ";
+            order += Constants.MILK + ", ";
             hasToppings = true;
         }
         if(hasCaramel == true){
-            order += getString(R.string.Caramel) + ", ";
+            order += Constants.CARAMEL + ", ";
             hasToppings = true;
         }
         if(hasToppings == true){

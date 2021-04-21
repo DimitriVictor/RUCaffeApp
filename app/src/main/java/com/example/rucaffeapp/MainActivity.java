@@ -10,12 +10,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import java.lang.ref.Reference;
+
+
 /**
  * This class is the Main Activity
  * @author Padmank Ambadipudi
  * @author Dimitri Victor
  */
 public class MainActivity extends AppCompatActivity {
+    public static Reference references;
+
 
     private ActionBar actionbar;
     private ImageButton orderDonutButton;
@@ -25,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

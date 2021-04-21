@@ -17,11 +17,11 @@ public class Constants {
     public static final double DONUT_PRICE = 1.39;
 
     //CONSTANTS FOR COFFEE ADDINS
-  //  public static final String CREAM = "Cream";
-   // public static final String SYRUP = "Syrup";
-    //public static final String MILK = "Milk";
-  //  public static final String WHIPPEDCREAM = "WhippedCream";
-   // public static final String CARAMEL = "Caramel";
+    public static final String CREAM = "Cream";
+    public static final String SYRUP = "Syrup";
+    public static final String MILK = "Milk";
+    public static final String WHIPPEDCREAM = "WhippedCream";
+    public static final String CARAMEL = "Caramel";
 
     public static final double ADDIN_PRICE = .20;
 
