@@ -1,6 +1,7 @@
 package com.example.rucaffeapp;
 
 import android.content.res.Resources;
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,9 +22,15 @@ public class Coffee extends MenuItem implements Customizable {
      * Constructor for the Coffee class. It initialized the size, count, and price
      */
     public Coffee(){
-        size = getString(R.string.NoSize);
         count = 1;
         price = 0;
+    }
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        size = getString(R.string.NoSize);
+
+
     }
 
     /**
@@ -91,8 +98,8 @@ public class Coffee extends MenuItem implements Customizable {
     @Override
     public String toString(){
         boolean hasToppings = false;
-       System.out.println(Resources.getSystem().getString(R.string.Coffee));
-        String order = "";
+
+        String order = getString(R.string.Coffee);
 
         order += "(" + Integer.toString((int)count) + ") ";
 
