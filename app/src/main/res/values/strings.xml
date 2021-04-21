@@ -1,14 +1,21 @@
 <resources>
     <string name="app_name">RUCaffeApp</string>
+    <string name="donutname">Order Donuts</string>
+    <string name="orderdonutname">Add To Order</string>
 
     <string name="color">color</string>
     <string name="jellyred">#C90808</string>
     <string name="brown">#964B00</string>
     <string name="lightbrown">#b99c80</string>
+    <string name="blueberry">#4f86f7</string>
+    <string name="oldfashioncolor">#fc9403</string>
+    <string name="spicycolor">#fc0303</string>
 
     <string name="donutType">donutType</string>
     <string name="donutColor">donutColor</string>
     <string name="subtotal">Subtotal: $ </string>
+    <string name="donutsuccess">Order Added Successfully</string>
+    <string name="donutfail">Failed To Add Order, Please Try Again</string>
 
     <string name="jellyDonut">Jelly Donut</string>
     <string name="bostonCream">Boston Cream</string>

@@ -14,6 +14,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class OrderDonutActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private ActionBar actionbar;
@@ -23,14 +25,14 @@ public class OrderDonutActivity extends AppCompatActivity implements AdapterView
     private Button addToOrderBtn;
 
     private String donutType;
-    private double amount;
+    private int amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_donut);
 
-        setTitle("Add To Order"); //FIX STRING
+        setTitle(R.string.orderdonutname); //FIX STRING
         actionbar = getSupportActionBar();
         String color = getIntent().getStringExtra(getString(R.string.color));
         actionbar.setBackgroundDrawable(new ColorDrawable(Color.parseColor(color)));
@@ -51,16 +53,35 @@ public class OrderDonutActivity extends AppCompatActivity implements AdapterView
 
         addToOrderBtn = (Button) findViewById(R.id.addToOrderBtn);
         addToOrderBtn.setBackgroundColor(Color.parseColor(color));
+        addToOrderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addToOrder();
+            }
+        });
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String text = parent.getItemAtPosition(position).toString();
-        amount = Constants.DONUT_PRICE * Integer.parseInt(text);
-        subtotalTV.setText((getString(R.string.subtotal) + amount));
-        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+        amount = Integer.parseInt(text);
+        double cost = Constants.DONUT_PRICE * Integer.parseInt(text);
+        DecimalFormat df = new DecimalFormat("#.##");
+        String subTotal = df.format(cost);
+        subtotalTV.setText((getString(R.string.subtotal) + subTotal));
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) { }
+
+    public void addToOrder(){
+        Donut donut = new Donut(donutType, amount);
+        boolean addedSuccessfully = MainActivity.order.add(donut);
+        if(addedSuccessfully){
+            Toast.makeText(this, R.string.donutsuccess, Toast.LENGTH_LONG).show();
+        }
+        else{
+            Toast.makeText(this, R.string.donutfail, Toast.LENGTH_LONG).show();
+        }
+    }
 }

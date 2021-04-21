@@ -17,6 +17,11 @@ import android.widget.ImageButton;
  */
 public class MainActivity extends AppCompatActivity {
 
+    public static Order order;
+    public static StoreOrder storeOrder = new StoreOrder();
+    private int orderNum = 1;
+    public static boolean orderExist = false;
+
     private ActionBar actionbar;
     private ImageButton orderDonutButton;
     private ImageButton orderCoffeeButton;
@@ -52,13 +57,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openDonutMenu(){
+        createNewOrder();
         Intent intent = new Intent(this, DonutActivity.class);
         startActivity(intent);
     }
 
     public void openCoffeeMenu(){
+        createNewOrder();
         Intent intent = new Intent(this, CoffeeActivity.class);
         startActivity(intent);
+    }
+
+    /**
+     * This function creates a new order if one does not already exist each time
+     */
+    private void createNewOrder() {
+        if(!this.orderExist){
+            this.order = new Order(this.orderNum);
+            this.orderNum++;
+            this.orderExist = true;
+        }
     }
 
 }
