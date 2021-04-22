@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +46,7 @@ public class StoreOrderActivity extends AppCompatActivity implements AdapterView
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         remove(position);
+        Toast.makeText(this, R.string.donutsuccess, Toast.LENGTH_LONG).show();
     }
 //need to create in string.xml
     private String createString(ArrayList<String> specific_order_list, int orderNum){
@@ -77,6 +79,7 @@ public class StoreOrderActivity extends AppCompatActivity implements AdapterView
             public void onClick(DialogInterface dialog, int which) {
                 MainActivity.storeOrder.remove(MainActivity.storeOrder.getOrder(position));
                 store_orders.remove(position);
+                showToast();
                 list_adapter.notifyDataSetChanged();
             }
         });
@@ -94,6 +97,8 @@ public class StoreOrderActivity extends AppCompatActivity implements AdapterView
 
     }
 
-
+    public void showToast(){
+        Toast.makeText(this, R.string.orderRemoved, Toast.LENGTH_LONG).show();
+    }
 
 }

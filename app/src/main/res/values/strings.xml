@@ -64,5 +64,6 @@
     <string name="deleteThisMessage">Do You Want To Delete This?</string>
     <string name="confirmation">Confirmation</string>
     <string name="placeOrder">Do You Want To Place Order?</string>
+    <string name="orderRemoved">Your Order Was Removed</string>
 
 </resources>
