@@ -7,6 +7,7 @@
     tools:context=".ViewOrder">
 
     <ListView
+        android:id="@+id/ordersListView"
         android:layout_width="361dp"
         android:layout_height="136dp"
         android:layout_alignParentBottom="true"
@@ -14,8 +15,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginBottom="290dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:background="@color/black" />
+        android:layout_marginRight="25dp"/>
 
     <Button
         android:id="@+id/placeOrderBtn"

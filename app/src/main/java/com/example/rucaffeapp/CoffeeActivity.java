@@ -97,7 +97,7 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
         addOrderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addOrderSelected(view);
+                //addOrderSelected(view);
             }
         });
     }
