@@ -60,6 +60,13 @@ public class MainActivity extends AppCompatActivity {
                 openCoffeeMenu();
             }
         });
+
+        viewOrderButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                openOrderMenu();
+            }
+        });
     }
 
     public void openDonutMenu(){
@@ -71,6 +78,12 @@ public class MainActivity extends AppCompatActivity {
     public void openCoffeeMenu(){
         createNewOrder();
         Intent intent = new Intent(this, CoffeeActivity.class);
+        startActivity(intent);
+    }
+
+    private void openOrderMenu() {
+        createNewOrder();
+        Intent intent = new Intent(this, ViewOrder.class);
         startActivity(intent);
     }
 

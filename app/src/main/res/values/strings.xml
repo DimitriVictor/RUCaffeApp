@@ -2,6 +2,7 @@
     <string name="app_name">RUCaffeApp</string>
     <string name="donutname">Order Donuts</string>
     <string name="orderdonutname">Add To Order</string>
+    <string name="viewordername">Your Order</string>
 
     <string name="color">color</string>
     <string name="jellyred">#C90808</string>
