@@ -67,6 +67,13 @@ public class MainActivity extends AppCompatActivity {
                 openOrderMenu();
             }
         });
+
+        storeOrderButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                openViewStoreOrder();
+            }
+        });
     }
 
     public void openDonutMenu(){
@@ -84,6 +91,12 @@ public class MainActivity extends AppCompatActivity {
     private void openOrderMenu() {
         createNewOrder();
         Intent intent = new Intent(this, ViewOrder.class);
+        startActivity(intent);
+    }
+
+    private void openViewStoreOrder(){
+        //do i need to create an order
+        Intent intent = new Intent(this, StoreOrderActivity.class);
         startActivity(intent);
     }
 

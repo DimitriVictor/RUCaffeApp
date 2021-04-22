@@ -1,8 +1,10 @@
 package com.example.rucaffeapp;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -12,8 +14,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 public class ViewOrder extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
@@ -45,11 +49,16 @@ public class ViewOrder extends AppCompatActivity implements AdapterView.OnItemCl
 
         ordersListView = (ListView) findViewById(R.id.ordersListView);
         ordersListView.setOnItemClickListener(this);
-        ArrayAdapter<String> list = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, MainActivity.order.getOrderList());
-        ordersListView.setAdapter(list);
+
+        orderList = MainActivity.order.getOrderList();
+        list_adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, orderList);
+
+        ordersListView.setAdapter(list_adapter);
 
         placeOrderBtn = (Button) findViewById(R.id.placeOrderBtn);
         placeOrderBtn.setBackgroundColor(getResources().getColor(R.color.black));
+
+
 
         updatePrices();
     }
@@ -76,6 +85,10 @@ public class ViewOrder extends AppCompatActivity implements AdapterView.OnItemCl
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-        System.out.println(parent.getItemAtPosition(position).toString());
+
     }
+
+
+
+
 }

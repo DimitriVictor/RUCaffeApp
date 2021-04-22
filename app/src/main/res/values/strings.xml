@@ -43,5 +43,12 @@
     <string name="coffeeSuccess">Coffee Added Sucessfully</string>
     <string name="coffeeFail">Failed To Order Coffee</string>
     <string name="coffeename">Order Coffee</string>
+    <string name="invalidOrder">No Order Available To Add</string>
+    <string name="orderConfirmed">Thank You For Placing An Order</string>
+    <string name="deleteThisMessage">Do You Want To Delete This?</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="no">No</string>
+    <string name="yes" />
+    <string name="placeOrder">Do You Want To Place Order?</string>
 
 </resources>
