@@ -4,13 +4,10 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-
-import java.lang.ref.Reference;
 
 
 /**
@@ -96,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void openOrderMenu() {
         createNewOrder();
-        Intent intent = new Intent(this, ViewOrder.class);
+        Intent intent = new Intent(this, ViewOrderActivity.class);
         startActivity(intent);
     }
 
