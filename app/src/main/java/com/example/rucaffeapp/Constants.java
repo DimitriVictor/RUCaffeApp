@@ -16,7 +16,7 @@ public class Constants {
     public static final String CREAM = "Cream";
     public static final String SYRUP = "Syrup";
     public static final String MILK = "Milk";
-    public static final String WHIPPEDCREAM = "WhippedCream";
+    public static final String WHIPPEDCREAM = "Whipped Cream";
     public static final String CARAMEL = "Caramel";
 
     public static final double ADDIN_PRICE = .20;
