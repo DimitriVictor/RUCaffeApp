@@ -4,6 +4,21 @@
     <string name="orderdonutname">Add To Order</string>
     <string name="viewordername">Your Order</string>
 
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+
+    <string name="cantplace">ERROR: Cannot Place Order Unless You Order Something</string>
+    <string name="placeMessege">Are you sure you want to place this order?</string>
+    <string name="placeTitle">Place Order</string>
+    <string name="placeFailed">Could Not Add Order, Please Try Again</string>
+    <string name="orderadded">Order Added Successfully</string>
+
+    <string name="deleteTitle">Delete Item</string>
+    <string name="deleteMessege">Are you sure you want to delete this item?</string>
+    <string name="itemno">You Clicked NO</string>
+    <string name="itemfailed">Could Not Delete Item, Please Try Again</string>
+    <string name="itemremoved">Item Removed Successfully</string>
+
     <string name="color">color</string>
     <string name="jellyred">#C90808</string>
     <string name="brown">#964B00</string>
