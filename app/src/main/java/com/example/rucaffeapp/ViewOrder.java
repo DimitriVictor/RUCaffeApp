@@ -168,12 +168,14 @@ public class ViewOrder extends AppCompatActivity implements AdapterView.OnItemCl
         }
 
         MainActivity.orderExist = false;
-        for(int i = 0; i < MainActivity.order.getOrderLength(); i++){
-            MainActivity.order.remove(MainActivity.order.getItem(i));
-        }
-        ArrayAdapter<String> list = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, MainActivity.order.getOrderList());
-        ordersListView.setAdapter(list);
-        updatePrices();
+     //   for(int i = 0; i < MainActivity.order.getOrderLength(); i++){
+      //      MainActivity.order.remove(MainActivity.order.getItem(i));
+       // }
+      //  ArrayAdapter<String> list = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, MainActivity.order.getOrderList());
+       // ordersListView.setAdapter(list);
+      //  updatePrices();
         displayToast(getString(R.string.orderadded));
+        ViewOrder.super.onBackPressed();
+
     }
 }
