@@ -12,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.Spinner;
 
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.security.cert.Certificate;
 
@@ -95,11 +96,13 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
         });
 
         addOrderButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 addOrderSelected(view);
             }
         });
+
     }
 
 
@@ -205,6 +208,19 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    public void addOrderSelected(View view){
+
+        double totalPrice = (sizePrice + addInsPrice)*count;
+        coffee.setPrice(totalPrice);
+        boolean addedSuccessfully = MainActivity.order.add(coffee);
+        if(addedSuccessfully){
+            System.out.println("asdfasd");
+            Toast.makeText(this, R.string.coffeeSuccess, Toast.LENGTH_LONG).show();
+        } else{
+            Toast.makeText(this, R.string.coffeeFail, Toast.LENGTH_LONG).show();
+        }
     }
 
 }
