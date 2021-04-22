@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static Order order;
     public static StoreOrder storeOrder = new StoreOrder();
-    private int orderNum = 1;
+    public static int orderNum = 1;
     public static boolean orderExist = false;
 
     private ActionBar actionbar;
@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -104,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
      * This function creates a new order if one does not already exist each time
      */
     private void createNewOrder() {
-        if(!this.orderExist){
+        if (!this.orderExist) {
             this.order = new Order(this.orderNum);
             this.orderNum++;
             this.orderExist = true;
