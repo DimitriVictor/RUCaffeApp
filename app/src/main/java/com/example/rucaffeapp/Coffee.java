@@ -138,4 +138,29 @@ public class Coffee extends MenuItem implements Customizable {
     double itemPrice() {
         return price;
     }
+
+
+    /**
+     * This function sets the number of coffees the user wants
+     * @param count sets the amount of coffees that the user wants to order.
+     */
+    public void setCount(int count){
+        this.count = count;
+    }
+
+    /**
+     * This function sets the size of the coffee ordered
+     * @param size is the size of the coffe ordered
+     */
+    public void setSize(String size){
+        this.size = size;
+    }
+
+    /**
+     * This function sets the price of the coffee ordered based on the size
+     * @param price is the numerical price of the size ordered
+     */
+    public void setPrice(double price){
+        this.price = price;
+    }
 }
