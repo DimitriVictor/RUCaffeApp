@@ -37,13 +37,13 @@ public class Coffee extends MenuItem implements Customizable {
     public boolean add(Object obj) {
         if (obj instanceof String) {
             String additionType = (String) obj;
-            if (additionType.equals("Cream")) {
+            if (additionType.equals(Constants.CREAM)) {
                 hasCream = true;
                 return true;
             } else if (additionType.equals(Constants.WHIPPEDCREAM)) {
                 hasWhippedCream = true;
                 return true;
-            } else if (additionType.equals(Constants.WHIPPEDCREAM)) {
+            } else if (additionType.equals(Constants.MILK)) {
                 hasMilk = true;
                 return true;
             } else if (additionType.equals(Constants.SYRUP)) {
