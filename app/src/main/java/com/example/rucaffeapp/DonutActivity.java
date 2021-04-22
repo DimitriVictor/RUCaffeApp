@@ -13,6 +13,8 @@ import android.widget.ImageView;
 
 /**
  * This class handles the operations for selecting a donut to order. The user is presented with the different  types of donut flavors to select
+ * @author Padmank Ambadipudi
+ * @author Dimitri Victor
  */
 public class DonutActivity extends AppCompatActivity {
 

@@ -2,6 +2,11 @@ package com.example.rucaffeapp;
 
 import java.text.DecimalFormat;
 
+/**
+ * This class contains all the constants that are used in the project
+ * @author Padmank Ambadipudi
+ * @author Dimitri Victor
+ */
 public class Constants {
 
     //CONSTANTS FOR PRICING
