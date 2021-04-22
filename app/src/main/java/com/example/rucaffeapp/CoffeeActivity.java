@@ -60,7 +60,7 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
         countSpinner = (Spinner) findViewById(R.id.countSpinner);
         totalTextArea = (TextView) findViewById(R.id.subtotalTextView);
 
-        String[] nums = new String[]{"1", "2", "3"};
+        String[] nums = new String[]{String.valueOf(Constants.ONE), String.valueOf(Constants.TWO), String.valueOf(Constants.THREE)};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, nums);
         countSpinner.setAdapter(adapter);
         countSpinner.setOnItemSelectedListener(this);
