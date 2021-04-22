@@ -51,6 +51,7 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
         actionbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
 
         addOrderButton = (Button) findViewById(R.id.addToOrderButton);
+        addOrderButton.setBackgroundColor(getResources().getColor(R.color.black));
         caramelCheckbox = (CheckBox) findViewById(R.id.caramelCheckBox);
         milkCheckbox = (CheckBox) findViewById(R.id.milkCheckBox);
         creamCheckbox = (CheckBox) findViewById(R.id.creamCheckBox);
