@@ -67,9 +67,9 @@ public class StoreOrderActivity extends AppCompatActivity implements AdapterView
      * @return returns the string order representation
      */
     private String createString(ArrayList<String> specific_order_list, int orderNum){
-        String result = getString(R.string.orderNum) + orderNum + ": ";
+        String result = getString(R.string.orderNum) + orderNum + getString(R.string.colon);
         for(int i = 0; i< specific_order_list.size(); i++){
-            result += specific_order_list.get(i) + ", ";
+            result += specific_order_list.get(i) + getString(R.string.comma);
         }
         return result;
     }

@@ -67,4 +67,7 @@
     <string name="orderRemoved">Your Order Was Removed</string>
     <string name="orderNum">Order#</string>
 
+    <string name="colon">: </string>
+    <string name="comma">, </string>
+
 </resources>
