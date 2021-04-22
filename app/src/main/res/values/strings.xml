@@ -42,5 +42,6 @@
     <string name="Venti">Venti</string>
     <string name="coffeeSuccess">Coffee Added Sucessfully</string>
     <string name="coffeeFail">Failed To Order Coffee</string>
+    <string name="coffeename">Order Coffee</string>
 
 </resources>

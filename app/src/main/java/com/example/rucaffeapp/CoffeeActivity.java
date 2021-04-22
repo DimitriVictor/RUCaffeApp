@@ -1,9 +1,12 @@
 package com.example.rucaffeapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.Resources;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -24,6 +27,8 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
     private double count = 1;
     private double addInsPrice = 0;
 
+    private ActionBar actionbar;
+
     private Button addOrderButton;
     private CheckBox caramelCheckbox;
     private CheckBox whippedCreamCheckbox;
@@ -37,8 +42,13 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coffee);
+
+        setTitle(R.string.coffeename);
+        actionbar = getSupportActionBar();
+        actionbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
 
         addOrderButton = (Button) findViewById(R.id.addToOrderButton);
         caramelCheckbox = (CheckBox) findViewById(R.id.caramelCheckBox);
@@ -217,8 +227,8 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
 
         boolean addedSuccessfully = MainActivity.order.add(coffee);
         if(addedSuccessfully){
-            System.out.println("asdfasd");
             Toast.makeText(this, R.string.coffeeSuccess, Toast.LENGTH_LONG).show();
+
         } else{
             Toast.makeText(this, R.string.coffeeFail, Toast.LENGTH_LONG).show();
         }
