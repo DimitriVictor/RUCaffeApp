@@ -14,13 +14,11 @@ import java.lang.ref.Reference;
 
 
 /**
- * This class is the Main Activity
+ * This class is the Main Activity where the user can order a donut, order a coffee, view their order, and view all of the store orders they have made
  * @author Padmank Ambadipudi
  * @author Dimitri Victor
  */
 public class MainActivity extends AppCompatActivity {
-    public static Reference references;
-
 
     public static Order order;
     public static StoreOrder storeOrder = new StoreOrder();
@@ -39,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         actionbar = getSupportActionBar();
-        actionbar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#000000")));
+        actionbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
 
         orderDonutButton = (ImageButton) findViewById(R.id.openDonutButton);
         orderCoffeeButton = (ImageButton) findViewById(R.id.openCoffeeButton);
@@ -75,24 +73,36 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * This function takes the user to the screen where they can order donuts
+     */
     public void openDonutMenu(){
         createNewOrder();
         Intent intent = new Intent(this, DonutActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * This function takes the user to the screen where they can order coffee
+     */
     public void openCoffeeMenu(){
         createNewOrder();
         Intent intent = new Intent(this, CoffeeActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * This function takes the user to the screen where they can view all the items in their current order
+     */
     private void openOrderMenu() {
         createNewOrder();
         Intent intent = new Intent(this, ViewOrder.class);
         startActivity(intent);
     }
 
+    /**
+     * This function takes the user to the screen where they can view all the orders they have made
+     */
     private void openViewStoreOrder(){
         //do i need to create an order
         Intent intent = new Intent(this, StoreOrderActivity.class);

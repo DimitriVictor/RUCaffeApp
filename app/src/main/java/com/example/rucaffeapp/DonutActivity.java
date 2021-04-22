@@ -94,9 +94,9 @@ public class DonutActivity extends AppCompatActivity {
     }
 
     /**
-     * This funtion
-     * @param s
-     * @param color
+     * This function takes the user to the page where they can order the donut they clicked
+     * @param s the donut type that the user clicked
+     * @param color the color corresponding to the donut type
      */
     private void orderDonut(String s, String color) {
         Intent intent = new Intent(this, OrderDonutActivity.class);
