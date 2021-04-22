@@ -2,6 +2,7 @@
     <string name="app_name">RUCaffeApp</string>
     <string name="donutname">Order Donuts</string>
     <string name="orderdonutname">Add To Order</string>
+    <string name="viewordername">Your Order</string>
 
     <string name="color">color</string>
     <string name="jellyred">#C90808</string>
@@ -14,6 +15,8 @@
     <string name="donutType">donutType</string>
     <string name="donutColor">donutColor</string>
     <string name="subtotal">Subtotal: $ </string>
+    <string name="salestax">Sales Tax: $ </string>
+    <string name="total">Total: $ </string>
     <string name="donutsuccess">Order Added Successfully</string>
     <string name="donutfail">Failed To Add Order, Please Try Again</string>
 

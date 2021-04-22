@@ -29,7 +29,7 @@ public class DonutActivity extends AppCompatActivity {
 
         setTitle(R.string.donutname);
         actionbar = getSupportActionBar();
-        actionbar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#000000"))); //MIGHT NEED TO CHANGE
+        actionbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
 
         //Initialize Buttons
         donutMenuPic = (ImageView) findViewById(R.id.donutMenuPic);
