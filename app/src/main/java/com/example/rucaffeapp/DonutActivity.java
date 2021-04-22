@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+/**
+ * This class handles the operations for selecting a donut to order. The user is presented with the different  types of donut flavors to select
+ */
 public class DonutActivity extends AppCompatActivity {
 
     private ActionBar actionbar;
@@ -90,6 +93,11 @@ public class DonutActivity extends AppCompatActivity {
         spicyBtn.setBackgroundColor(getResources().getColor(R.color.spicycolor));
     }
 
+    /**
+     * This funtion
+     * @param s
+     * @param color
+     */
     private void orderDonut(String s, String color) {
         Intent intent = new Intent(this, OrderDonutActivity.class);
         intent.putExtra(getString(R.string.donutType), s);

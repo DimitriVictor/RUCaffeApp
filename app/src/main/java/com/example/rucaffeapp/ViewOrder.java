@@ -87,7 +87,7 @@ public class ViewOrder extends AppCompatActivity implements AdapterView.OnItemCl
      * This function handles the logic that occurs when an item in the list of items to be ordered is clicked on by the user
      * @param parent the AdapterView where the click happened.
      * @param view the view within the AdapterView that was clicked (this will be a view provided by the adapter)
-     * @param position the position of the view in the adapted
+     * @param position the position of the view in the adapter
      * @param id row id of the item that was clicked
      */
     @Override

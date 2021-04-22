@@ -16,6 +16,11 @@ import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
+/**
+ * This class handles the operations for ordering the selected donut. The user can select the amount of donut to order as well
+ * @author Pamdank Ambadipudi
+ * @author Dimitri Victor
+ */
 public class OrderDonutActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private ActionBar actionbar;
@@ -61,6 +66,13 @@ public class OrderDonutActivity extends AppCompatActivity implements AdapterView
         });
     }
 
+    /**
+     * This function adjusts the displayed prices based on what item in the drop down menu was selected
+     * @param parent the AdapterView where the click happened.
+     * @param view the view within the AdapterView that was clicked (this will be a view provided by the adapter)
+     * @param position the position of the view in the adapter
+     * @param id row id of the item that was clicked
+     */
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String text = parent.getItemAtPosition(position).toString();
@@ -71,9 +83,16 @@ public class OrderDonutActivity extends AppCompatActivity implements AdapterView
         subtotalTV.setText((getString(R.string.subtotal) + subTotal));
     }
 
+    /**
+     * This function handles the logic that occurs when no item is selected
+     * @param parent the AdapterView where the click happened
+     */
     @Override
     public void onNothingSelected(AdapterView<?> parent) { }
 
+    /**
+     * This function adds the donut with the specified quantity to the list of items in the order
+     */
     public void addToOrder(){
         Donut donut = new Donut(donutType, amount);
         boolean addedSuccessfully = MainActivity.order.add(donut);
