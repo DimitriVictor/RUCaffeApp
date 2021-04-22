@@ -46,7 +46,6 @@ public class StoreOrderActivity extends AppCompatActivity implements AdapterView
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         remove(position);
-        Toast.makeText(this, R.string.donutsuccess, Toast.LENGTH_LONG).show();
     }
 //need to create in string.xml
     private String createString(ArrayList<String> specific_order_list, int orderNum){
