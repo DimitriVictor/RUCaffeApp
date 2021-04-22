@@ -161,6 +161,7 @@ public class ViewOrder extends AppCompatActivity implements AdapterView.OnItemCl
      * This function places the order by adding it to the list of store orders and then updates the screen accordingly
      */
     private void addOrder() {
+        System.out.println("this orders number is : " + MainActivity.order.getOrderNumber());
         boolean addedSuccessfully = MainActivity.storeOrder.add(MainActivity.order);
         if(!addedSuccessfully){
             displayToast(getString(R.string.placeFailed));
