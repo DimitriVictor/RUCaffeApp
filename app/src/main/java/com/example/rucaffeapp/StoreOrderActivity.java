@@ -49,7 +49,7 @@ public class StoreOrderActivity extends AppCompatActivity implements AdapterView
     }
 //need to create in string.xml
     private String createString(ArrayList<String> specific_order_list, int orderNum){
-        String result = "Order# " + orderNum + " ";
+        String result = getString(R.string.orderNum) + orderNum + " ";
         for(int i = 0; i< specific_order_list.size(); i++){
             result += specific_order_list.get(i) + " ";
         }
