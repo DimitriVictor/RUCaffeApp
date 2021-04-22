@@ -13,6 +13,8 @@ import android.widget.ImageView;
 
 /**
  * This class handles the operations for selecting a donut to order. The user is presented with the different  types of donut flavors to select
+ * @author Padmank Ambadipudi
+ * @author Dimitri Victor
  */
 public class DonutActivity extends AppCompatActivity {
 
@@ -94,9 +96,9 @@ public class DonutActivity extends AppCompatActivity {
     }
 
     /**
-     * This funtion
-     * @param s
-     * @param color
+     * This function takes the user to the page where they can order the donut they clicked
+     * @param s the donut type that the user clicked
+     * @param color the color corresponding to the donut type
      */
     private void orderDonut(String s, String color) {
         Intent intent = new Intent(this, OrderDonutActivity.class);
