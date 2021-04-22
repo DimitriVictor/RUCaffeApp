@@ -3,10 +3,8 @@ package com.example.rucaffeapp;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -17,8 +15,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.security.cert.Certificate;
-
+/**
+ * This class handles the operations for selecting a coffee to order. The user is presented with the different  types of coffee flavors to select
+ * @author Padmank Ambadipudi
+ * @author Dimitri Victor
+ */
 public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Coffee coffee = new Coffee();
@@ -41,7 +42,6 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coffee);
@@ -73,35 +73,35 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
         creamCheckbox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectCream(view);
+                selectCream();
             }
         });
 
         milkCheckbox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectMilk(view);
+                selectMilk();
             }
         });
 
         whippedCreamCheckbox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectWhippedCream(view);
+                selectWhippedCream();
             }
         });
 
         caramelCheckbox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectCaramel(view);
+                selectCaramel();
             }
         });
 
         syrupCheckbox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectSyrup(view);
+                selectSyrup();
             }
         });
 
@@ -109,14 +109,16 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
 
             @Override
             public void onClick(View view) {
-                addOrderSelected(view);
+                addOrderSelected();
             }
         });
 
     }
 
-
-    public void selectCream(View view) {
+    /**
+     * this handles the functionality when selecting the cream checkbox addition
+     */
+    public void selectCream() {
         String type = getString(R.string.Cream);
         if (creamCheckbox.isChecked()) {
             addInsPrice += Constants.ADDIN_PRICE;
@@ -129,7 +131,10 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
         totalTextArea.setText("$" + String.format("%.2f", totalPrice));
     }
 
-    public void selectMilk(View view) {
+    /**
+     * this handles the functionality when selecting the milk checkbox addition
+     */
+    public void selectMilk() {
         String type = getString(R.string.Milk);
         if (milkCheckbox.isChecked()) {
             addInsPrice += Constants.ADDIN_PRICE;
@@ -142,7 +147,10 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
         totalTextArea.setText("$" + String.format("%.2f", totalPrice));
     }
 
-    public void selectWhippedCream(View view) {
+    /**
+     * this handles the functionality when selecting the whipped cream checkbox addition
+     */
+    public void selectWhippedCream() {
         String type = getString(R.string.WhippedCream);
         if (whippedCreamCheckbox.isChecked()) {
             addInsPrice += Constants.ADDIN_PRICE;
@@ -155,7 +163,10 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
         totalTextArea.setText("$" + String.format("%.2f", totalPrice));
     }
 
-    public void selectSyrup(View view) {
+    /**
+     * this handles the functionality when selecting the syrup checkbox addition
+     */
+    public void selectSyrup() {
         String type = getString(R.string.Syrup);
         if (syrupCheckbox.isChecked()) {
             addInsPrice += Constants.ADDIN_PRICE;
@@ -168,7 +179,10 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
         totalTextArea.setText("$" + String.format("%.2f", totalPrice));
     }
 
-    public void selectCaramel(View view) {
+    /**
+     * this handles the functionality when selecting the caramel checkbox addition
+     */
+    public void selectCaramel() {
         String type = getString(R.string.Caramel);
         if (caramelCheckbox.isChecked()) {
             addInsPrice += Constants.ADDIN_PRICE;
@@ -181,6 +195,13 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
         totalTextArea.setText("$" + String.format("%.2f", totalPrice));
     }
 
+    /**
+     * This function is called when the spinner chooses either a coffee size or amount
+     * @param parent the AdapterView where the click happened.
+     * @param view the view within the AdapterView that was clicked (this will be a view provided by the adapter)
+     * @param position the position of the view in the adapter
+     * @param id row id of the item that was clicked
+     */
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
@@ -214,13 +235,19 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
         }
 
     }
-
+    /**
+     * This function is called when nothing is called on the spinner
+     * @param parent the AdapterView where the click happened.
+     */
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
 
-    public void addOrderSelected(View view){
+    /**
+     * This function is the functionality of the app after the user taps add to order button
+     */
+    public void addOrderSelected(){
 
         double totalPrice = (sizePrice + addInsPrice)*count;
         coffee.setPrice(totalPrice);
