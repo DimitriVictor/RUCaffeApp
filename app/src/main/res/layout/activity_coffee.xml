@@ -83,7 +83,6 @@
         android:layout_width="115dp"
         android:layout_height="51dp"
         android:layout_marginTop="15dp"
-        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/countSpinner"
         app:layout_constraintTop_toBottomOf="@+id/countSpinner" />
 
@@ -119,7 +118,6 @@
         android:layout_width="114dp"
         android:layout_height="44dp"
         android:layout_marginTop="16dp"
-        android:background="@color/white"
         app:layout_constraintStart_toStartOf="@+id/creamCheckBox"
         app:layout_constraintTop_toBottomOf="@+id/creamCheckBox" />
 

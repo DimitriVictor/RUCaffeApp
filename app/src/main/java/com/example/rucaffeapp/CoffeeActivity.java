@@ -99,7 +99,7 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
 
             @Override
             public void onClick(View view) {
-                //addOrderSelected(view);
+                addOrderSelected(view);
             }
         });
 
@@ -214,6 +214,7 @@ public class CoffeeActivity extends AppCompatActivity implements AdapterView.OnI
 
         double totalPrice = (sizePrice + addInsPrice)*count;
         coffee.setPrice(totalPrice);
+
         boolean addedSuccessfully = MainActivity.order.add(coffee);
         if(addedSuccessfully){
             System.out.println("asdfasd");
