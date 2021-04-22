@@ -68,7 +68,7 @@ public class ViewOrder extends AppCompatActivity implements AdapterView.OnItemCl
      */
     private void updatePrices() {
         DecimalFormat df = new DecimalFormat("#.##");
-        df.setMinimumFractionDigits(2);
+        df.setMinimumFractionDigits(Constants.TWO);
 
         double subTotal = MainActivity.order.getSubTotal();
         double tax = Constants.SALES_TAX * subTotal;

@@ -47,7 +47,7 @@ public class OrderDonutActivity extends AppCompatActivity implements AdapterView
         textView.setText(donutType);
 
         quantityMenu = (Spinner) findViewById(R.id.quantitiyMenu);
-        String[] items = new String[]{"1", "2", "3", "4", "5"};
+        String[] items = new String[]{String.valueOf(Constants.ONE), String.valueOf(Constants.TWO), String.valueOf(Constants.THREE), String.valueOf(Constants.FOUR), String.valueOf(Constants.FIVE)};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         quantityMenu.setAdapter(adapter);
         quantityMenu.setOnItemSelectedListener(this);
