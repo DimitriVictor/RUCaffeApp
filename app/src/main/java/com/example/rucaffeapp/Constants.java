@@ -5,8 +5,8 @@ import java.text.DecimalFormat;
 public class Constants {
 
     //CONSTANTS FOR PRICING
-    public static DecimalFormat df = new DecimalFormat("#.##");
-    public static final String ZERO = df.format(0.00);
+    public static DecimalFormat df = new DecimalFormat("0.00");
+    public static final String ZERO = df.format(0.0);
     public static final double SALES_TAX = .06625;
 
     //CONSTANTS FOR DONUT OBJECT
