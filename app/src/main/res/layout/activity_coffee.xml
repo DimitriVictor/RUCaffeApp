@@ -14,9 +14,9 @@
         android:layout_marginLeft="149dp"
         android:layout_marginRight="162dp"
         android:layout_marginStart="149dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/coffee" />
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="52dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="20dp"
         android:text="Caramel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -60,7 +60,7 @@
         android:id="@+id/whippedCreamCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="20dp"
         android:text="Whipped Cream"
         app:layout_constraintStart_toStartOf="@+id/caramelCheckBox"
         app:layout_constraintTop_toBottomOf="@+id/caramelCheckBox" />
@@ -80,18 +80,18 @@
 
     <Spinner
         android:id="@+id/sizeSpinner"
-        android:layout_width="276dp"
+        android:layout_width="115dp"
         android:layout_height="51dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/teal_200"
-        app:layout_constraintStart_toStartOf="@+id/whippedCreamCheckBox"
-        app:layout_constraintTop_toBottomOf="@+id/whippedCreamCheckBox" />
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/countSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/countSpinner" />
 
     <EditText
         android:id="@+id/subtotalTextView"
-        android:layout_width="273dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="254dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
         android:clickable="false"
         android:cursorVisible="false"
         android:editable="false"
@@ -102,18 +102,56 @@
         android:longClickable="false"
         android:text="$0.00"
         app:layout_constraintEnd_toEndOf="@+id/sizeSpinner"
-        app:layout_constraintStart_toStartOf="@+id/sizeSpinner"
+        app:layout_constraintStart_toStartOf="@+id/whippedCreamCheckBox"
         app:layout_constraintTop_toBottomOf="@+id/sizeSpinner" />
 
     <Button
         android:id="@+id/addToOrderButton"
-        android:layout_width="271dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="258dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="15dp"
         android:text="Add To Order"
-        app:layout_constraintEnd_toEndOf="@+id/subtotalTextView"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/subtotalTextView"
         app:layout_constraintTop_toBottomOf="@+id/subtotalTextView" />
+
+    <Spinner
+        android:id="@+id/countSpinner"
+        android:layout_width="114dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/creamCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/creamCheckBox" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="128dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="19dp"
+        android:clickable="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:linksClickable="false"
+        android:longClickable="false"
+        android:text="Amount"
+        android:textIsSelectable="false"
+        app:layout_constraintEnd_toEndOf="@+id/whippedCreamCheckBox"
+        app:layout_constraintStart_toStartOf="@+id/whippedCreamCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/whippedCreamCheckBox" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="129dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="20dp"
+        android:clickable="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:linksClickable="false"
+        android:longClickable="false"
+        android:text="Size"
+        android:textIsSelectable="false"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
