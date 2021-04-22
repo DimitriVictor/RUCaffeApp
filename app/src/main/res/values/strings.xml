@@ -65,5 +65,6 @@
     <string name="confirmation">Confirmation</string>
     <string name="placeOrder">Do You Want To Place Order?</string>
     <string name="orderRemoved">Your Order Was Removed</string>
+    <string name="orderNum">Order#</string>
 
 </resources>
