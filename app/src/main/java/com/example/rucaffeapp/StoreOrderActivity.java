@@ -66,11 +66,14 @@ public class StoreOrderActivity extends AppCompatActivity implements AdapterView
      * @param orderNum this is the specific order's number
      * @return returns the string order representation
      */
-    private String createString(ArrayList<String> specific_order_list, int orderNum){
+    private String createString(ArrayList<String> specific_order_list, int orderNum, Order order){
         String result = getString(R.string.orderNum) + orderNum + getString(R.string.colon);
         for(int i = 0; i< specific_order_list.size(); i++){
-            result += specific_order_list.get(i) + getString(R.string.comma);
+            result += specific_order_list.get(i) + getString(R.string.comma) + " ";
         }
+        double total =  order.getSubTotal() + (Constants.SALES_TAX * order.getSubTotal());
+
+        result += getString(R.string.total) + String.format("%.2f", total);
         return result;
     }
 
@@ -87,7 +90,8 @@ public class StoreOrderActivity extends AppCompatActivity implements AdapterView
 
             int order_index = all_order_nums.get(i);
             ArrayList<String> specific_order_list = MainActivity.storeOrder.getOrder(i).getOrderList();
-            store_orders.add(createString(specific_order_list, order_index));
+            Order order = MainActivity.storeOrder.getOrder(i);
+            store_orders.add(createString(specific_order_list, order_index, order));
         }
         return store_orders;
     }
