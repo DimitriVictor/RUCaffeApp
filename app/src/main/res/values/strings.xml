@@ -40,5 +40,7 @@
     <string name="Tall">Tall</string>
     <string name="Grande">Grande</string>
     <string name="Venti">Venti</string>
+    <string name="coffeeSuccess">Coffee Added Sucessfully</string>
+    <string name="coffeeFail">Failed To Order Coffee</string>
 
 </resources>
