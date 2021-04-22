@@ -15,6 +15,8 @@
     <string name="donutType">donutType</string>
     <string name="donutColor">donutColor</string>
     <string name="subtotal">Subtotal: $ </string>
+    <string name="salestax">Sales Tax: $ </string>
+    <string name="total">Total: $ </string>
     <string name="donutsuccess">Order Added Successfully</string>
     <string name="donutfail">Failed To Add Order, Please Try Again</string>
 

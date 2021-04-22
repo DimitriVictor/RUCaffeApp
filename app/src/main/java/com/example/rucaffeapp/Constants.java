@@ -1,16 +1,12 @@
 package com.example.rucaffeapp;
 
+import java.text.DecimalFormat;
+
 public class Constants {
 
-    //CONSTANTS INVOLVING WINDOW SIZES
-    public static final int MAIN_WINDOW_HEIGHT = 500;
-    public static final int MAIN_WINDOW_WIDTH = 600;
-    public static final int DONUT_WINDOW_HEIGHT = 450;
-    public static final int DONUT_WINDOW_WIDTH = 500;
-    public static final int COFFEE_WINDOW_HEIGHT = 450;
-    public static final int COFFEE_WINDOW_WIDTH = 350;
-
     //CONSTANTS FOR PRICING
+    public static DecimalFormat df = new DecimalFormat("#.##");
+    public static final String ZERO = df.format(0.00);
     public static final double SALES_TAX = .06625;
 
     //CONSTANTS FOR DONUT OBJECT
@@ -40,6 +36,8 @@ public class Constants {
     public static final int ONE = 1;
     public static final int TWO = 2;
     public static final int THREE = 3;
+    public static final int FOUR = 4;
+    public static final int FIVE = 5;
 
     public static final int NO_ORDERS = 0;
 
