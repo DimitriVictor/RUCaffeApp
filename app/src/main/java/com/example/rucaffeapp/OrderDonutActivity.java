@@ -47,14 +47,16 @@ public class OrderDonutActivity extends AppCompatActivity implements AdapterView
         textView.setText(donutType);
 
         quantityMenu = (Spinner) findViewById(R.id.quantitiyMenu);
-        String[] items = new String[]{String.valueOf(Constants.ONE), String.valueOf(Constants.TWO), String.valueOf(Constants.THREE), String.valueOf(Constants.FOUR), String.valueOf(Constants.FIVE)};
+        String[] items = new String[]{String.valueOf(Constants.ONE), String.valueOf(Constants.TWO), String.valueOf(Constants.THREE),
+                String.valueOf(Constants.FOUR), String.valueOf(Constants.FIVE)};
+
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         quantityMenu.setAdapter(adapter);
         quantityMenu.setOnItemSelectedListener(this);
 
         subtotalTV = (TextView) findViewById(R.id.subtotalDonutTextView);
         subtotalTV.setText(getString(R.string.subtotal) + Constants.DONUT_PRICE);
-        amount = 1;
+        amount = Constants.ONE;
 
         addToOrderBtn = (Button) findViewById(R.id.addToOrderBtn);
         addToOrderBtn.setBackgroundColor(Color.parseColor(color));

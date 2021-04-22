@@ -34,6 +34,7 @@ public class Constants {
     public static final double GRANDE_PRICE = 2.99;
     public static final String VENTE = "Venti";
     public static final double VENTE_PRICE = 3.49;
+    public static final String COFFEE = "Coffee";
 
 
     //CONSTANTS FOR # OF COFFEES
@@ -45,6 +46,5 @@ public class Constants {
 
     public static final int NO_ORDERS = 0;
 
-    //CONSTANTS FOR STORE ORDER
-  //  public static final String zeroDollars = "$0.00";
+
 }

@@ -94,7 +94,7 @@ public class Coffee extends MenuItem implements Customizable {
     public String toString(){
         boolean hasToppings = false;
 
-        String order = "Coffee";
+        String order = Constants.COFFEE;
 
         order += "(" + Integer.toString((int)count) + ") ";
 
