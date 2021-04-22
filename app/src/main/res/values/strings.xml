@@ -3,6 +3,7 @@
     <string name="donutname">Order Donuts</string>
     <string name="orderdonutname">Add To Order</string>
     <string name="viewordername">Your Order</string>
+    <string name="storeorder">Store Orders</string>
 
     <string name="yes">YES</string>
     <string name="no">NO</string>

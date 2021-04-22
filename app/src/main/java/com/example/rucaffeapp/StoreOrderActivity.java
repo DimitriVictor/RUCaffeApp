@@ -1,9 +1,11 @@
 package com.example.rucaffeapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,12 +19,17 @@ import java.util.List;
 public class StoreOrderActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     ArrayAdapter<String> list_adapter;
     ArrayList<String> store_orders;
+    private ActionBar actionbar;
 
     private ListView storeOrdersListView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_order);
+
+        setTitle(R.string.storeorder);
+        actionbar = getSupportActionBar();
+        actionbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
 
         storeOrdersListView = (ListView) findViewById(R.id.storeOrderListView);
         storeOrdersListView.setOnItemClickListener(this);
